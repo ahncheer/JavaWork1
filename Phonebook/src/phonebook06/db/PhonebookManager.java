@@ -15,7 +15,7 @@ import java.util.Date;
 // CONTROLLER 객체
 //   어플리케이션의 동작, 데이터 처리(CRUD), (Business logic 담당)
 
-// by 김우경
+// by 김.우.경
 public class PhonebookManager implements Pb, Closeable {
 
 	// DB 를 위한 변수들 선언	
