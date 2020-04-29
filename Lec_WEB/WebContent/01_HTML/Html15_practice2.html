@@ -1,34 +1,251 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>캘린더 폼 작성</title>
+<title>캘린더 만들기</title>
+<!-- by 최현주 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+li {
+float:left;
+margin-left:auto;
+margin-right:auto;
+	
+}
+
+li a {
+	text-align:center;
+	font-weight:bold;
+	text-decoration: none;
+	padding: 15px;
+	color: black;
+	display: block;
+	width: 200px;
+
+	center;
+}
+
+li a:hover {
+	background-color:rgb(75, 137, 201);
+	color: white;
+	font-family: Batar;
+}
+h1 {
+	color:rgb(83, 147, 205)
+}
+
+div.article table, div.article th, div.article td {
+border: 1px solid lightgray;
+}
+
+div.article td:hover {
+	background-color:rgb(218, 251, 253);
+	color: black;
+	
+}
+table, th, td {
+    border-top: 1px solid lightgray;  /* 두께, 선종류, 선색상 */
+    border-bottom: 1px solid lightgray;  /* 두께, 선종류, 선색상 */
+    border-collapse: collapse; /* border 붙이기 */
+}
+
+
+td {
+	font-size:8px;
+	text-align:left; 
+	padding: 10px;	/* 셀 안쪽의 컨텐트와 border 사이 여백 */
+}
+
+th{
+background-color:rgb(238, 238, 238);
+padding: 6px;
+font-size:10px;
+text-align:center; 
+font-weight: bold;
+}
+
+button:hover {
+	background-color:rgb(83, 147, 205);
+	color: white;
+	font-family: Batar;
+}
+
+button.btn1{
+background-color: white;
+}
+
+</style>
+
 </head>
-<body>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<body style="text-align:center;">
+<ul style="text-align:center;
+	width: 100%;
+	padding-left:20%;
+	list-style-type: none;
+	background-color: rgb(247, 247, 247);
+	overflow: hidden;">
+	<li><a>정책차림표</a></li>
+	<li><a>미리보는 지원사업</a></li>
+	<li><a>마감임박 지원사업</a></li>
+	<li><a>접수중인 지원사업</a></li>
+</ul>
+
+<i class="fas fa-angle-left" style = "color:rgb(180, 180, 180);font-size:35px;"></i>
+<span style="color:rgb(84, 148, 206);font-size:25px;">2015-06-17</span>
+<i class="fas fa-angle-right" style = "color:rgb(180, 180, 180);font-size:35px;"></i>
+
+<div id="content" style="border: 1px solid lightgray">
+	<ul style = "text-align:left;font-size:10px;">
+		<label><input type="radio" style="width:10px;height:10px"  value="blue"> 전체</label>
+      <label><input type="radio" style="width:10px;height:10px"value="red"> 창업벤처</label>
+      <label><input type="radio" style="width:10px;height:10px"value="red"> 소상공인</label>
+      <label><input type="radio" style="width:10px;height:10px"value="red"> 판로수출</label>
+      <label><input type="radio" style="width:10px;height:10px" value="red"> R&D</label>
+      <label><input type="radio" style="width:10px;height:10px"value="red"> 금융세제</label>
+      <label><input type="radio" style="width:10px;height:10px"value="red"> 인력</label>
+		<br>
+	</ul>
+	<div class="article">
+	<table style="width:100%; ">
+	<tr>
+		<th>일</th>
+		<th>월</th>
+		<th>화</th>
+		<th>수</th>
+		<th>목</th>
+		<th>금</th>
+		<th>토</th>
+	</tr>
+	<tr>
+		<td style = "background-color: rgb(247, 247, 247)"> </td>
+		<td>1</td>
+		<td>2</td>
+		<td>3</td>
+		<td>4</td>
+		<td>5</td>
+		<td>6</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>8</td>
+		<td>9</td>
+		<td>10</td>
+		<td>11</td>
+		<td>12</td>
+		<td>13</td>
+	</tr>
+	<tr>
+		<td>14</td>
+		<td>15</td>
+		<td>16</td>
+		<td>17</td>
+		<td>18</td>
+		<td>19</td>
+		<td>20</td>
+	</tr>
+	<tr>
+		<td>21</td>
+		<td>22</td>
+		<td>23</td>
+		<td>24</td>
+		<td>25</td>
+		<td>26</td>
+		<td>27</td>
+	</tr>
+	<tr>
+		<td>28</td>
+		<td>29</td>
+		<td>30</td>
+		<td style ="background-color: rgb(247, 247, 247)"> </td>
+		<td style ="background-color: rgb(247, 247, 247)"> </td>
+		<td style ="background-color: rgb(247, 247, 247)"> </td>
+		<td style ="background-color: rgb(247, 247, 247)"> </td>
+	</tr>
+	</table>
+	</div>	
+</div>
+<br>
+<div class="art" style = "text-align: left;font-size: 10px;">
+<a><span style = "color: rgb(216, 82, 64)">2015년 6월 7일. 전체</span> 검색결과 <span><b>진행중인 사업</b></span>은 <span style = "color: rgb(216, 82, 64)">총 614 건 </span>입니다.</a>
+<table style="width:100%">
+	<tr>
+		<th>번호</th>
+		<th>지원사업명</th>
+		<th>주관부처</th>
+		<th>신청기간</th>
+		<th>조회</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가신청..</td>
+		<td>중소기업청</td>
+		<td>2015.06.04~2015.06.30</td>
+		<td>731</td>
+	</tr>
+	
+	<tr>
+		<td>10</td>
+		<td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가신청..</td>
+		<td>중소기업청</td>
+		<td>2015.06.04~2015.06.30</td>
+		<td>731</td>
+	</tr>
+	
+	<tr>
+		<td>614</td>
+		<td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가신청..</td>
+		<td>중소기업청</td>
+		<td>2015.06.04~2015.06.30</td>
+		<td>731</td>
+	</tr>
+	
+	<tr>
+		<td>614</td>
+		<td>2015년 창조경제 벤처창업대전 정부포상 및 전시회 참가신청..</td>
+		<td>중소기업청</td>
+		<td>2015.06.04~2015.06.30</td>
+		<td>731</td>
+	</tr>
+	</table>
+</div>
+
+<br>
+<div class= btn1>
+	<button style = "color: rgb(223, 223, 223);
+border:1px solid rgb(223, 223, 223);">&lt;&lt;</button>
+	<button style = "color: rgb(223, 223, 223);
+border:1px solid rgb(223, 223, 223);">&lt;</button>
+	<span style = "color:black;">
+	<button style ="border:none;">1</button>
+	<button style ="border:none;">2</button>
+	<button style ="border:none;">3</button>
+	<button style ="border:none;">4</button>
+	<button style ="border:none;">5</button>
+	</span>
+	<button style = "color: rgb(223, 223, 223);
+border:1px solid rgb(223, 223, 223);">&gt;&gt;</button>
+	<button style = "color: rgb(223, 223, 223);
+border:1px solid rgb(223, 223, 223);">&gt;</button>
+</div>  
+<br>
+<div style="background-color: rgb(238, 238, 238);
+	padding:10px;">
+<select size="1" multiple>
+	<option >키워드</option>
+	<option >그만</option>
+	<option >하고싶다</option>
+	<option >휴 ㅠ</option>
+</select>
+<input type="text" name="userid" size="30">
+<button style = " width:10% ; height:20px; border:none; background-color:rgb(83, 147, 205); color:white; ">
+ 검색 
+</button>
+</div>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
