@@ -85,6 +85,9 @@ SELECT * FROM
 )
 WHERE RNUM >= 21 AND RNUM < 21 + 10;
 
+-- 한 페이지 5개 글
+-- > 4페이지
+-- WHERE RNUM >= 21 AND RNUM < 21 + 5; 
 
 SELECT * FROM 
 (
