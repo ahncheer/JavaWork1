@@ -48,9 +48,7 @@ form p:hover {cursor: pointer; color:blue;}
 
 
 <%-- JSTL 방식 --%>
-<%
-out.println("sda??? ds");
-%>
+
 
 
 
