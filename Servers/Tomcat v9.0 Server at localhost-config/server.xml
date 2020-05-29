@@ -171,7 +171,7 @@
 	
 	
 		
-		<Context docBase="JSP19_AJAX" path="/JSP19_AJAX" reloadable="true" source="org.eclipse.jst.jee.server:JSP19_AJAX"/><Context docBase="JSP20_FileUpload" path="/JSP20_FileUpload" reloadable="true" source="org.eclipse.jst.jee.server:JSP20_FileUpload"/></Host>
+		</Host>
     </Engine>
   </Service>
 </Server><!-- 

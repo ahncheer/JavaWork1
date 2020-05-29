@@ -26,10 +26,17 @@
 </head>
 <body>
 
-
+<form action="FileCheck.jsp" method="post" name="fileCheck">
 <%
 	// MultipartRequest 객체 생성 준비
-	String saveDirectory = "C:\\tomcat\\upload";
+	//String saveDirectory = "C:\\tomcat\\upload";
+
+	// 파일 저장경로
+	// 서버에서(서블릿) 어디에 어느폴더에서 서블릿으로 변환되는지 알아내기
+	ServletContext context = this.getServletContext();
+	// 서블릿앙의 upload 폴더의 물리적인 경로 얻어오기
+	String saveDirectory = context.getRealPath("upload");
+
 
 	System.out.println("업로드 경로: " + saveDirectory);
 	
@@ -70,10 +77,12 @@
 			// 위 name 의 '업로드 원본 파일명'을 가져온다.
 			String originalFileName = multi.getOriginalFileName(name);
 			out.println("원본파일 이름: " + originalFileName + "<br>");
+			out.println("<input type='hidden' name='originalFileName' value='" + originalFileName + "'");
 			
 			// 서버 시스템에 '저장된 파일명' 을 가져온다.
 			String fileSystemName = multi.getFilesystemName(name);
 			out.println("파일시스템 이름: " + fileSystemName + "<br>");
+			out.println("<input type='hidden' name='fileSystemName' value='" + fileSystemName + "'");
 			
 			// 업로딩된 파일의 타일 : MIME 타입 (ex: image/png ...)
 			String fileType = multi.getContentType(name);
@@ -106,17 +115,9 @@
 		e.printStackTrace();
 		out.println("파일 처리 예외 발생<br>");
 	}
-	
-	
-
 %>
-
-
-
-
-
-
-
+<input type="submit" value="업로드 파일 확인"/><br>
+</form>
 
 
 
