@@ -171,7 +171,7 @@
 	
 	
 		
-		</Host>
+		<Context docBase="JSPEX_WebEditor" path="/JSPEX_WebEditor" reloadable="true" source="org.eclipse.jst.jee.server:JSPEX_WebEditor"/><Context docBase="asw_test" path="/asw_test" reloadable="true" source="org.eclipse.jst.jee.server:asw_test"/></Host>
     </Engine>
   </Service>
 </Server><!-- 

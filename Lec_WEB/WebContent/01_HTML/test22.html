@@ -4,9 +4,11 @@
 <meta charset="UTF-8">
 <title>Form2</title>
 </head>
+request.setCharacterEncoding("UTF-8");
+
 <!-- 다양한 form element 들 -->
 <body>
-<form action="https://www.w3schools.com/action_page.php">
+<form>
 
 
 <h3>&lt;input&gt;</h3>
@@ -30,10 +32,18 @@
 <input type="submit" value="제출">
 
 </form>
+<p>
+    <%
+    int kor=Integer.parseInt(request.getParameter("age"));
+
+    %>
+</p>
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
+
+
 
 
 

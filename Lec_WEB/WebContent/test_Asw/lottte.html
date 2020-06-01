@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <div class="openDiv" style="display: block;">
+        <p class="tit"><span class="fBold">나에게 맞는</span> 어트랙션을 찾아보세요!</p>
+        <div class="selArea">
+            <div class="">
+                <p class="selTit">위치</p>
+                <div class="openSel">
+                    <a href="javascript:" class="value">전체</a>
+                    <ul id="pstnCd" class="option" style="">
+                        <li><a href="javascript:" class="selected" data-pstn-cd="">전체</a></li>
+                        <li><a href="javascript:" class="" data-pstn-cd="A0201">어드벤처 1층</a></li>
+                            <li><a href="javascript:" class="" data-pstn-cd="A0202">어드벤처 2층</a></li>
+                            <li><a href="javascript:" class="" data-pstn-cd="A0203">어드벤처 3층</a></li>
+                            <li><a href="javascript:" class="" data-pstn-cd="A0204">어드벤처 4층</a></li>
+                            <li><a href="javascript:" class="" data-pstn-cd="A0205">매직아일랜드</a></li>
+                            <li><a href="javascript:" class="" data-pstn-cd="A0206">언더랜드 B1층</a></li>
+                            <li><a href="javascript:" class="" data-pstn-cd="A0207">키디존</a></li>
+                            <li><a href="javascript:" class="" data-pstn-cd="A0215">파크 외 1층</a></li>
+                            <li><a href="javascript:" class="" data-pstn-cd="A0208">파크 외 B3층</a></li>
+                            </ul>
+                </div>
+            </div>
+            <div class="">
+                <p class="selTit">나이</p>
+                <div class="openSel">
+                    <a href="javascript:" class="value">전체</a>
+                    <ul id="age" class="option" style="">
+                        <li><a href="javascript:" class="" data-min-age="0" data-max-age="4">0~4세</a></li>
+                        <li><a href="javascript:" class="" data-min-age="5" data-max-age="64">5~64세</a></li>
+                        <li><a href="javascript:" class="" data-min-age="65" data-max-age="99">65세 이상</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <p class="selTit">키</p>
+                <div class="inputDiv">
+                    <input type="text" value="" id="tall" class="value" maxlength="3" style="text-align:right;">
+                    <p class="cmFix">cm</p>
+                </div>							
+            </div>
+            <div class="">
+                <p class="selTit">보호자</p>
+                <div class="chkBtn">
+                    <a href="javascript:" id="cmpn" class="value ">보호자 탑승</a>
+                </div>
+            </div>
+        </div>
+        <div class="btnArea">
+            <a href="javascript:" id="search">조회하기</a>
+            <a href="javascript:" class="resetBtn reset"><img src="/common/images/btn/srch_reset.png" alt=""></a>
+        </div>
+        <a href="javascript:" class="closeBt"><img src="/common/images/btn/srch_close.png" alt=""></a>
+    </div>
+    
+</body>
+</html>
