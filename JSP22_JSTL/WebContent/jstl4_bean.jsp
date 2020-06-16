@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.lec.beans.*" %>    
+<%@ page import="attraction.beans.*" %>    
 <%@ page import="java.util.*" %>
 <%-- JSTL core 라이브러리 포함 --%>   
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
@@ -13,12 +13,12 @@
 </head>
 <body>
 <%
-	Person chang = new Person();
+	AttrPerson chang = new AttrPerson();
 	chang.setName("장윤성");
 	chang.setAge(27);
 %>
 
-<c:set var="dto" value="<%= chang %>"/>
+<c:set var="dto" value="<%=chang%>"/>
 이름: ${dto.name }<br>  <%-- 내부적으로 dto.getName() 호출 --%>
 나이: ${dto.age }<br>
 dto: ${dto }<br>
@@ -26,7 +26,7 @@ dto: ${dto }<br>
 <hr>
 
 <%-- EL 은 bean 객체 의 내용을 읽어올수 있다 --%>
-<jsp:useBean id="p0" class="com.lec.beans.Person">
+<jsp:useBean id="p0" class="com.lec.beans.AttrPerson">
 	<jsp:setProperty name="p0" property="name" value="홍성용"/>
 	<jsp:setProperty name="p0" property="age" value="28"/>
 </jsp:useBean>
@@ -39,20 +39,20 @@ p0: ${p0 }<br>
 
 <%-- 빈(bean) 배열의 경우 --%>
 <%
-	Person p1 = new Person();
+	AttrPerson p1 = new AttrPerson();
 	p1.setName("고질라");
 	p1.setAge(100);
-	Person p2 = new Person();
+	AttrPerson p2 = new AttrPerson();
 	p2.setName("킹기도라");
 	p2.setAge(200);
-	Person p3 = new Person();
+	AttrPerson p3 = new AttrPerson();
 	p3.setName("모스라");
 	p3.setAge(80);
 
-	Person [] arr = {p1, p2, p3};
+	AttrPerson [] arr = {p1, p2, p3};
 %>
 
-<c:set var="dtoArr" value="<%= arr %>"/>
+<c:set var="dtoArr" value="<%=arr%>"/>
 <c:forEach var="p" items="${dtoArr }">
 	${p.name }<br>
 	${p.age }<br>
@@ -60,7 +60,7 @@ p0: ${p0 }<br>
 </c:forEach>
 
 <%
-	ArrayList<Person> list = new ArrayList<Person>();
+	ArrayList<AttrPerson> list = new ArrayList<AttrPerson>();
 	list.add(p1);
 	list.add(p2);
 	list.add(p3);
@@ -68,7 +68,7 @@ p0: ${p0 }<br>
 
 <br>
 
-<c:set var="dtoArr" value="<%= list %>"/>
+<c:set var="dtoArr" value="<%=list%>"/>
 <c:forEach var="p" items="${dtoArr }">
 	${p.name }<br>
 	${p.age }<br>
@@ -111,7 +111,7 @@ ${dtoArr[3].name }<br> <%-- Exception 없이 넘어감 --%>
 
 <hr>
 <%
-	Person park = null;
+	AttrPerson park = null;
 %>
 
 <c:set var="v1" value="<%= park %>"/>  <%-- null 값 --%>

@@ -77,6 +77,26 @@ SELECT  name "사원이름",
 		(SELECT d.dname FROM t_dept2 d WHERE e.deptno = d.dcode ) "부서이름"
 FROM t_emp2 e;
 
+CREATE TABLE likes
+(
+	user_uid number NOT NULL,
+	attr_id number NOT NULL,
+	PRIMARY KEY (user_uid, attr_id)
+);
 
+SELECT * FROM likes;
 
-
+INSERT 
+	INTO likes 
+	VALUES (5, 5);
+	
+SELECT count(*) FROM likes WHERE user_uid = 1 GROUP BY user_uid ;	
+	
+INSERT INTO likes VALUES (USER_UID , ATTR_ID);	
+	
+	
+	
+	
+	
+	
+	

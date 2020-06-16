@@ -29,10 +29,6 @@ public class D {
 
 	public static final String SQL_WRITE_DELETE_BY_UID = 
 			"DELETE FROM test_write WHERE wr_uid = ?";
-	
-	
-	public static final String SQL_WRITE_SELECT_UID_LOCA = //loca보다 높은값?을 가진 uid만 출력 ㅠ
-			"SELECT * FROM test_write WHERE wr_uid > ?";
 
 }
 

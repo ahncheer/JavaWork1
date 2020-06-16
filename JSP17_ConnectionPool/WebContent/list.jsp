@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.lec.beans.*" %>    
-<jsp:useBean id="dao" class="com.lec.beans.WriteDAO"/> <%-- DAO bean 생성 --%>
+<%@ page import="attraction.beans.*" %>    
+<jsp:useBean id="dao" class="com.lec.beans.AttrWriteDAO"/> <%-- DAO bean 생성 --%>
 
-<% // dao 사용한 트랜잭션
-	WriteDTO [] arr = dao.select();
+<%
+	// dao 사용한 트랜잭션
+	AttrWriteDTO [] arr = dao.select();
 %>
 
 <!DOCTYPE html>

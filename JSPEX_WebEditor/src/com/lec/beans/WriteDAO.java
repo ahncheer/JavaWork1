@@ -125,22 +125,6 @@ public class WriteDAO {
 		return arr;
 	} // end select()
 	
-	//특정 값만 SELECT
-	public WriteDTO [] select2() throws SQLException {
-		WriteDTO [] arr = null;
-		
-		try {
-			pstmt = conn.prepareStatement(D.SQL_WRITE_SELECT_UID_LOCA);
-			rs = pstmt.executeQuery();
-			arr = createArray(rs);
-		} finally {
-			close();
-		}		
-		
-		return arr;
-	} // end select()
-	
-	
 	// 특정 uid 의 글 내용 읽기, 조회수 증가
 	// viewCnt 도 1 증가 해야 하고, 글 읽어와야 한다 --> 트랜잭션 처리
 	public WriteDTO [] readByUid(int uid) throws SQLException{
@@ -224,7 +208,8 @@ public class WriteDAO {
 	} // end deleteByUid()
 	
 	
-
+	
+	
 	
 	
 } // end DAO

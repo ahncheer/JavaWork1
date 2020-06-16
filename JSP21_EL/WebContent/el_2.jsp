@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="dto" class="com.lec.beans.WriteDTO" scope="page"/>
+<jsp:useBean id="dto" class="com.lec.beans.AttrWriteDTO" scope="page"/>
 <jsp:setProperty name="dto" property="uid" value="123"/>
 <jsp:setProperty name="dto" property="subject" value="제목입니다"/>
 <jsp:setProperty name="dto" property="name" value="작성자입니다"/>

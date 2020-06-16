@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="dao" class="com.lec.beans.WriteDAO"/> <%-- DAO bean 생성 --%>
+<jsp:useBean id="dao" class="com.lec.beans.AttrWriteDAO"/> <%-- DAO bean 생성 --%>
 
 <%
 	request.setCharacterEncoding("utf-8");  // 한글 인코딩 꼭!
 %>
-<jsp:useBean id="dto" class="com.lec.beans.WriteDTO"/>
+<jsp:useBean id="dto" class="com.lec.beans.AttrWriteDTO"/>
 <jsp:setProperty property="*" name="dto"/>
 
 <%--

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<jsp:useBean id="cnt" class="com.lec.beans.CountBean" scope="page"/>
+<jsp:useBean id="cnt" class="com.lec.beans.AttrCountBean" scope="page"/>
 
 <b>cnt 의 getCount 호출</b><br>
 

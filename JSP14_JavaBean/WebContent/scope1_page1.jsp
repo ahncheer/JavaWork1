@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="cnt" class="com.lec.beans.CountBean" scope="page"/>
+<jsp:useBean id="cnt" class="com.lec.beans.AttrCountBean" scope="page"/>
 <jsp:setProperty name="cnt" property="count"/>
 <%--  cnt.setCount(Integer.parseInt(request.getParameter("count")))--%>
 

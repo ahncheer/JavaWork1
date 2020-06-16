@@ -1,14 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<jsp:useBean id="person1" class="com.lec.beans.Person" scope="page"/>    
+<jsp:useBean id="person1" class="com.lec.beans.AttrPerson" scope="page"/>    
 <%--
 	Person person1 = new com.lec.beans.Person();  // 기본생성자 호출
 	request.setAttribute("person1", person1);  // 좀더 정확히는 이코드도 수행
  --%>   
  
 <%-- 기본생성자 생성후 useBean 안에서 setProperty 사용 --%>
-<jsp:useBean id="person2" class="com.lec.beans.Person" scope="page">
+<jsp:useBean id="person2" class="com.lec.beans.AttrPerson" scope="page">
 	<jsp:setProperty name="person2" property="name" value="명기범"/>
 	<jsp:setProperty name="person2" property="age" value="26"/>
 	<jsp:setProperty name="person2" property="id" value="99887"/>
@@ -17,7 +17,7 @@
 
 <%-- form 에서 넘어온 값을 bean 객체가 바로 받을수 있다.
 	bean 의 필드명(getter/setter 명) 과 form 의 name 이 일치해야 한다 --%>
-<jsp:useBean id="person3" class="com.lec.beans.Person" scope="page"/>
+<jsp:useBean id="person3" class="com.lec.beans.AttrPerson" scope="page"/>
 <jsp:setProperty name="person3" property="name"/>
 <jsp:setProperty name="person3" property="age"/>
 <jsp:setProperty name="person3" property="id"/>
@@ -26,7 +26,7 @@
 
 
 <%-- parameter 를 일괄로 받아오기 --%>
-<jsp:useBean id="person4" class="com.lec.beans.Person" scope="page"/>
+<jsp:useBean id="person4" class="com.lec.beans.AttrPerson" scope="page"/>
 <jsp:setProperty name="person4" property="*"/>
 
 

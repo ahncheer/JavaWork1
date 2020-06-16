@@ -1,16 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<%@ page import="com.lec.beans.*" %>
-<jsp:useBean id="dao" class="com.lec.beans.WriteDAO"/>
+<%@ page import="attraction.beans.*" %>
+<jsp:useBean id="dao" class="com.lec.beans.AttrWriteDAO"/>
 
 <%  // parameter 받아오기
 	int uid = Integer.parseInt(request.getParameter("uid"));
 	// ※ 이 단계에서 parameter 검증 필요
 %>
 
-<% // dao 사용한 트랜잭션
-	WriteDTO [] arr = dao.readByUid(uid);
+<%
+	// dao 사용한 트랜잭션
+	AttrWriteDTO [] arr = dao.readByUid(uid);
 %>
 
 <%

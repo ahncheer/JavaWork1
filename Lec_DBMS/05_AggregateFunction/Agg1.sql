@@ -19,6 +19,8 @@ SELECT deptno, round(avg(nvl(bonus, 0)), 1) 보너스평균
 FROM t_professor
 GROUP BY DEPTNO
 
+
+
 -- #5101
 SELECT deptno, POSITION, avg(pay) 평균급여
 FROM t_professor

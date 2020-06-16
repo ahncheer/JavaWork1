@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
-<jsp:useBean id="dao" class="com.lec.beans.WriteDAO"/> <%-- DAO bean 생성 --%>
+<jsp:useBean id="dao" class="com.lec.beans.AttrWriteDAO"/> <%-- DAO bean 생성 --%>
 
 <% // parameter 받아오기
 	int uid = Integer.parseInt(request.getParameter("uid"));

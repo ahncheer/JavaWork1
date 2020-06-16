@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "attr_menu" style="width: 250px;width:200px; border:5px ridge burlywood;
+                 display:inline-block; margin: 10px;">
+        <a href="" style="text-decoration: none;">
+            <div id="item_img" style="height:200px; width:200px; background-position:center;
+                    background-image:url(<%=attr_cardimg%>); 
+                    background-size: cover;">
+            </div>
+            <div id="item_name" style="width: 50px; width:200px; color: dimgray; margin: 10px;
+            font-family: 'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif;"><b><%=attr_name%></b></div>
+            <div id="attr_uid">attr_id 확인용 : <%=uid%></div>
+        </a>
+    </div>
+    <br><br><br><br>
+    <style>
+        select{
+            width: 200px;
+            padding: .8em .5em;
+            border: 1px solid #999;
+            font-family: inherit;
+            background: url('https://t1.daumcdn.net/cfile/tistory/99761B495C84AA8716') no-repeat 95% 50%;
+            border-radius: 0px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            }
+            select::-ms-expand {
+                display: none;
+            }
+            #attr_select{
+                display:inline-block; margin: 10px;
+            }
+
+
+    </style>
+    <div id = "attr_select">
+        <label>위치 : </label>
+        <!-- <input type="text" name="number" id="number"> -->
+        <select name="attr_location" id="attr_location">
+			<option value="2222">상관없음</option>
+			<option value="0">실내</option>
+		    <option value="1">실외</option>
+		</select>
+    </div>
+    
+    <div id = "attr_select">
+	    <label>나이 : </label>
+    	<select name="attr_age" id="attr_age">
+			<option value="2222">상관없음</option>
+			<option value="0">4세이하</option>
+		    <option value="1">5세이상~65세미만</option>
+		    <option value="2">65세이상</option>
+		</select>
+    </div>
+    
+        <div id = "attr_select">
+	    <label>키 : </label>
+    	<select name="attr_height" id="attr_height">
+			<option value="2222">상관없음</option>
+			<option value="0">110미만</option>
+			<option value="1">110이상~190미만</option>
+		    <option value="2">190이상</option>
+		</select>
+    </div>
+</body>
+</html>

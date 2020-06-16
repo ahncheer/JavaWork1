@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.lec.beans.WriteDTO" %>    
+<%@ page import="attraction.beans.AttrWriteDTO" %>    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -12,7 +12,7 @@
 <%
 	pageContext.setAttribute("myage", "흥~!");
 	request.setAttribute("myage", 30);
-	request.setAttribute("mydto", new WriteDTO(100, "제목", "내용", "작성자", 3));
+	request.setAttribute("mydto", new AttrWriteDTO(100, "제목", "내용", "작성자", 3));
 %>
 
 ${myage }<br>
@@ -20,7 +20,7 @@ ${requestScope.myage }<br>
 
 ${mydto }<br>  <%-- toString() 값 --%>
 ${mydto.uid }<br> 
-<%= ((WriteDTO)request.getAttribute("mydto")).getUid() %><br>
+<%=((AttrWriteDTO)request.getAttribute("mydto")).getUid()%><br>
 ${mydto.subject }<br>
 ${mydto.content }<br>
 

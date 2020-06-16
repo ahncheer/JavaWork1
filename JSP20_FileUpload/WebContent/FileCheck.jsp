@@ -105,6 +105,9 @@ java.net.URLEncoder  임포트!
 	</p>
 </form>
 </c:forEach>
+
+<hr>
+
 <%--
 	웹 경로에 이미지 저장한 경우
  --%>
@@ -115,7 +118,6 @@ java.net.URLEncoder  임포트!
 		src="upload/<%=fileSystemNames[i]%>"/>
 </div>
 <% } %>
-
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
