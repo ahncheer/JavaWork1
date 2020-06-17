@@ -1,7 +1,13 @@
 package com.command;
 
+import java.sql.SQLException;
+import java.util.Arrays;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.lec.beans.AjaxWriteList;
 import com.lec.beans.CategoryDAO;
 import com.lec.beans.CategoryDTO;
 
@@ -9,34 +15,82 @@ public class CateListCommand implements Command {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
 		
-
-		CategoryDAO dao = new CategoryDAO();  // DAO 객체 생성
-		CategoryDTO [] arr = null;  
+		int depth = 1;  // 디폴트 depth1
+		int parent = 0;  // 디폴트 parent 0
 		
-		try {
-			// 트랜잭션 수행
-			arr = dao.select();
+		String depthParam = request.getParameter("depth");
+		String parentParam = request.getParameter("parent");
+		
+		try {			
+			if(depthParam != null) depth = Integer.parseInt(depthParam);
+			if(parentParam != null) parent = Integer.parseInt(parentParam);
+		} catch(Exception e) {
 			
-			// "list" 란 name 으로 request 에 arr 값 전달
-			// 즉 request 에 담아서 컨트롤러에 전달되는 셈.
-			request.setAttribute("list", arr);
-			
+		}
+		
+		CategoryDAO dao = new CategoryDAO();
+		CategoryDTO [] dtoArr = null;
+		
+		try {			
+			if(depth == 1) {
+				// depth 1 만 읽어 들이면 된다.
+				dtoArr = dao.selectByDepth(depth);
+			} else {
+				// depth >= 2 이면 parent 값에 따라 읽어 들이기
+				dtoArr = dao.selectByDepthParent(depth, parent);
+			}
 		} catch(SQLException e) {
-			// 만약 CP 사용한다면
-			// NamingException 도 처리 해야 함.
-			
 			e.printStackTrace();
 		}
-	}
 		
 		
+		try {
+			String jsonString = "";
+			AjaxWriteList result = new AjaxWriteList();
+			
+			if(dtoArr == null || dtoArr.length == 0) {
+				result.setStatus("FAIL");
+				result.setCount(0);
+				result.setMessage("0개의 데이터");
+			} else {
+				result.setStatus("OK");
+				result.setCount(dtoArr.length);
+				result.setList(Arrays.asList(dtoArr));
+				result.setMessage("");
+			}
+			
+			ObjectMapper mapper = new ObjectMapper();
+			
+			jsonString = mapper.writerWithDefaultPrettyPrinter()
+					.writeValueAsString(result);
+			
+			response.setContentType("application/json; charset=utf-8");
+			response.getWriter().write(jsonString);
+			
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 		
-		
-		
-		
+	} // end execute()
 
-	}
+} 
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
