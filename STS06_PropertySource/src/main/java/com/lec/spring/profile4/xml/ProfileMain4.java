@@ -11,7 +11,7 @@ public class ProfileMain4 {
 		GenericXmlApplicationContext ctx = 
 				new GenericXmlApplicationContext();
 		
-		// 현재 활성화할 profile 이 무엇인지 세팅
+		// 현재 활성화할 profile 이 무엇인지 세팅  
 		ctx.getEnvironment().setActiveProfiles(config);
 		
 		// 해당 profile 의 설정파일만 설정 된다!
