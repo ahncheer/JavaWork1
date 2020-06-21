@@ -4,9 +4,9 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class ProfileMain4 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) {  
 		
-		String config = "run";  // "run" / "dev" 설정
+		String config = "run";  // "run" / "dev"   설정
 		
 		GenericXmlApplicationContext ctx = 
 				new GenericXmlApplicationContext();
