@@ -4,14 +4,14 @@ import org.springframework.context.support.GenericXmlApplicationContext;
 
 public class ProfileMain4 {
 
-	public static void main(String[] args) {  
+	public static void main(String[] args) {
 		
-		String config = "run";  // "run" / "dev"   설정
+		String config = "dev";  // "run" / "dev" 설정
 		
 		GenericXmlApplicationContext ctx = 
 				new GenericXmlApplicationContext();
 		
-		// 현재 활성화할 profile 이 무엇인지 세팅  
+		// 현재 활성화할 profile 이 무엇인지 세팅
 		ctx.getEnvironment().setActiveProfiles(config);
 		
 		// 해당 profile 의 설정파일만 설정 된다!

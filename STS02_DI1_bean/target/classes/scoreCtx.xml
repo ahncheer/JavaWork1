@@ -84,7 +84,13 @@
 	</bean>
 	
 	<bean id="myScore8" class="com.lec.spring.Score">
-	
+		<property name="score">
+			<list>
+				<value>100</value>
+				<value>200</value>
+				<value>300</value>
+			</list>
+		</property>
 	</bean>
 
 </beans>
