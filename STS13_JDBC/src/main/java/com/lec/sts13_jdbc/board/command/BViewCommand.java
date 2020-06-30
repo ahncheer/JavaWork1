@@ -1,7 +1,7 @@
-
 package com.lec.sts13_jdbc.board.command;
 
-import java.util.List;
+import java.util.Arrays;
+import java.util.Map;
 
 import org.springframework.ui.Model;
 
@@ -12,12 +12,30 @@ public class BViewCommand implements BCommand {
 
 	@Override
 	public void execute(Model model) {
+		Map<String, Object> map = model.asMap();
+		int uid = (Integer)map.get("uid");
 		BWriteDAO dao = new BWriteDAO();
-		List<BWriteDTO> list = dao.select();
-		model.addAttribute("list", list);
+		BWriteDTO dto = dao.readByUid(uid);
+		model.addAttribute("list", Arrays.asList(dto));
+		
+		// Arrays.asList(new String[]{"aaa", "bbb"})
+		// Arrays.asList("aaa", "bbb")
 
 	}
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

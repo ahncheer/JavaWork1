@@ -4,12 +4,15 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -75,6 +78,31 @@ public class HomeController {
 		return "member/doMember";
 	}
 	
+	
+	
+	@RequestMapping(value = "/member/register")
+	public String doRegister(HttpServletRequest request, Model model) {
+		String id = request.getParameter("id");
+		model.addAttribute("id", id);
+		String pw = request.getParameter("pw");
+		model.addAttribute("pw", pw);
+		String name = request.getParameter("name");
+		model.addAttribute("name", name);
+		
+		return "/member/doRegister";
+	}
+	
+	@RequestMapping(value = "/member/register")
+	public String doRegister(
+			@RequestParam("id")String id, 
+			@RequestParam("pw")String pw,
+			@RequestParam("name")String name,
+			 Model model) {
+				model.addAttribute("id", id);
+				model.addAttribute("pw", pw);
+				model.addAttribute("name", name);
+		return "/member/doRegister";
+	}
 	
 	
 	
