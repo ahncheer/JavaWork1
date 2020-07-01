@@ -171,7 +171,7 @@
 	
 	
 		
-		<Context docBase="STS12_Validation" path="/sts12_validation" reloadable="true" source="org.eclipse.jst.jee.server:STS12_Validation"/><Context docBase="STS13_JDBC" path="/sts13_jdbc" reloadable="true" source="org.eclipse.jst.jee.server:STS13_JDBC"/><Context docBase="STS14_Transaction" path="/sts14_transaction" reloadable="true" source="org.eclipse.jst.jee.server:STS14_Transaction"/><Context docBase="STS15_MyBatis" path="/sts15_mybatis" reloadable="true" source="org.eclipse.jst.jee.server:STS15_MyBatis"/></Host>
+		<Context docBase="STS12_Validation" path="/sts12_validation" reloadable="true" source="org.eclipse.jst.jee.server:STS12_Validation"/><Context docBase="STS13_JDBC" path="/sts13_jdbc" reloadable="true" source="org.eclipse.jst.jee.server:STS13_JDBC"/><Context docBase="STS14_Transaction" path="/sts14_transaction" reloadable="true" source="org.eclipse.jst.jee.server:STS14_Transaction"/><Context docBase="STS15_MyBatis" path="/sts15_mybatis" reloadable="true" source="org.eclipse.jst.jee.server:STS15_MyBatis"/><Context docBase="eureka" path="/eureka" reloadable="true" source="org.eclipse.jst.jee.server:eureka"/></Host>
     </Engine>
   </Service>
 </Server><!-- 

@@ -1,4 +1,4 @@
-package com.lec.sts15_jdbc.board.beans;
+package com.lec.sts15_mybatis.board.beans;
 
 import java.sql.Timestamp;
 
