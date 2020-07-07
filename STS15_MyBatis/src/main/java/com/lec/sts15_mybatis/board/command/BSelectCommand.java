@@ -6,8 +6,6 @@ import java.util.Map;
 import org.springframework.ui.Model;
 
 import com.lec.sts15_mybatis.board.C;
-import com.lec.sts15_mybatis.board.beans.BWriteDAO;
-import com.lec.sts15_mybatis.board.beans.BWriteDTO;
 import com.lec.sts15_mybatis.board.beans.IWriteDAO;
 
 public class BSelectCommand implements BCommand {
@@ -21,11 +19,8 @@ public class BSelectCommand implements BCommand {
 //		BWriteDTO dto = dao.selectByUid(uid);
 //		model.addAttribute("list", Arrays.asList(dto));
 		
-
-		// MyBatis 사용
 		IWriteDAO dao = C.sqlSession.getMapper(IWriteDAO.class);
-		//model.addAttribute("result", dao.insert(dto));
-		model.addAttribute("list",  Arrays.asList(dao.selectByUid(uid)));
+		model.addAttribute("list", Arrays.asList(dao.selectByUid(uid)));
 		
 
 	}
