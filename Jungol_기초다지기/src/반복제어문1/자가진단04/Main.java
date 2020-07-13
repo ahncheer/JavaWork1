@@ -1,6 +1,5 @@
 package 반복제어문1.자가진단04;
 
-import java.util.Scanner;
 
 /*
 http://jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=176&sca=1060
@@ -20,6 +19,7 @@ http://jungol.co.kr/bbs/board.php?bo_table=pbank&wr_id=176&sca=1060
 입력을 받으면 먼저 누적을 시킨 후에 조건을 확인한다.
 
  */
+import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {

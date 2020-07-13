@@ -5,10 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>member</title>
+<title>admin</title>
 </head>
 <body>
-<h1>/sample/member page</h1>
+<h1>/sample/admin page</h1>
 <a href="${pageContext.request.contextPath }/customLogout">Logout</a>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>

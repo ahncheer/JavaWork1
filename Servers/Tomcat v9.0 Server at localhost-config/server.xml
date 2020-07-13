@@ -171,7 +171,7 @@
 	
 	
 		
-		<Context docBase="STS18_Security" path="/sts18_security" reloadable="true" source="org.eclipse.jst.jee.server:STS18_Security"/></Host>
+		<Context docBase="Sterre_test" path="/strretest" reloadable="true" source="org.eclipse.jst.jee.server:Sterre_test"/></Host>
     </Engine>
   </Service>
 </Server><!-- 
