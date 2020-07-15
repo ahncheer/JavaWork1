@@ -39,4 +39,6 @@ ALTER TABLE sr_member_auth
 ;
 
 
+SELECT * FROM ST_MEMBER ;
+
 

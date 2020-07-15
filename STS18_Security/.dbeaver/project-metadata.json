@@ -1,1 +1,1 @@
-{"resources":{"ERD/spring_security_oracle.sql":{"sql-editor-data-source-id":"oracle_thin-1727bbd3acc-7ac86294cbe77e91","default-schema":"SCOTT0316"},"ERD/test_auth_oracle.sql":{"sql-editor-data-source-id":"oracle_thin-17326ae02cc-277e73190d7c74bf","default-schema":"SCOTT0316"}}}
+{"resources":{"ERD/spring_security_oracle.sql":{"default-schema":"SCOTT0316","sql-editor-data-source-id":"oracle_thin-17326ae02cc-277e73190d7c74bf"},"ERD/test_auth_oracle.sql":{"default-schema":"SCOTT0316","sql-editor-data-source-id":"oracle_thin-17326ae02cc-277e73190d7c74bf"}}}

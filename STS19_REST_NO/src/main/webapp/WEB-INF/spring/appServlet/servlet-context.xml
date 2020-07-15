@@ -62,12 +62,6 @@
 		<beans:property name="transactionManager" ref="transactionManager"/>
 	</beans:bean>
 	
-	<beans:bean name="ticketService"
-		class="com.lec.sts19_rest_no.ticket.TicketService">
-		
-	</beans:bean>
-	
-	
 	
 	
 </beans:beans>

@@ -36,7 +36,15 @@ FROM tbl_member u, tbl_member_auth a
 WHERE u.userid = a.userid AND u.userid = 'admin90';
 
 
+INSERT INTO users (userid, userpw, username, regdate, updatedate, enabled) 
+			VALUES ('user00', '1234');
+INSERT INTO users (username, password) VALUES ('member00', '1234');
+INSERT INTO users (username, password) VALUES ('admin00', '1234');
 
+INSERT INTO authorities VALUES ('user00', 'ROLE_USER');
+INSERT INTO authorities VALUES ('member00', 'ROLE_MEMBER');
+INSERT INTO authorities VALUES ('admin00', 'ROLE_MEMBER');
+INSERT INTO authorities VALUES ('admin00', 'ROLE_ADMIN');
 
 
 
