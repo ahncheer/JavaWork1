@@ -21,9 +21,9 @@
 	<bean id="bcryptPasswordEncoder"
 		class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
 	
-	<!-- 컨테이너의 HTTP security 요소 -->
+	<!-- 컨테이너의 HTTP security  요소 -->
 	<security:http>
-		<!-- 특정 url pattern 의 요청이 들어올때 인터셉터를 이용해 접근 제한 설정 -->
+		<!-- 특정 url pattern 의 요청이 들어올때 인터셉터를 이용해 접근  제한 설정 -->
 		<security:intercept-url pattern="/sample/all" access="permitAll"/>
 		<security:intercept-url pattern="/all/index" access="permitAll"/>
 		
