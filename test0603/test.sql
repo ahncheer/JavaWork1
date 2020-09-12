@@ -115,7 +115,7 @@ INSERT
 --AND attr_min_height < attr_height AND attr_height <= attr_max_height
 --ORDER BY attr_id DESC;
 
---AND attr_min_age < 5 AND 5 <= attr_max_age 
+--AND attr_min_age < 5 AND 5 <= attr_max_age ??
 --AND attr_min_height < attr_height AND attr_height <= attr_max_height
 
 
