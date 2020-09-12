@@ -126,7 +126,7 @@ SELECT count(*) FROM likes GROUP BY user_uid;
 
 
 
--- c추가해봄
+-- c추가해봄/????
 
 
 
