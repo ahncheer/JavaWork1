@@ -122,7 +122,7 @@ INSERT
 
 
 SELECT count(*) FROM likes GROUP BY user_uid;
---sddszzscc
+--sddszzsccbbb
 
 
 
