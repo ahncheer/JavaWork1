@@ -171,7 +171,11 @@
 	
 	
 		
+<<<<<<< HEAD
 		<Context docBase="Sterre_test" path="/sterre_test" reloadable="true" source="org.eclipse.jst.jee.server:Sterre_test"/><Context docBase="STS19_REST" path="/sts19_rest_no" reloadable="true" source="org.eclipse.jst.jee.server:STS19_REST"/><Context docBase="STS19_REST_NO" path="/sts19_rest" reloadable="true" source="org.eclipse.jst.jee.server:STS19_REST_NO"/><Context docBase="STS15_MyBatis" path="/sts15_mybatis" reloadable="true" source="org.eclipse.jst.jee.server:STS15_MyBatis"/><Context docBase="JSP12_Session" path="/JSP12_Session" reloadable="true" source="org.eclipse.jst.jee.server:JSP12_Session"/></Host>
+=======
+		<Context docBase="JSP19_AJAX" path="/JSP19_AJAX" reloadable="true" source="org.eclipse.jst.jee.server:JSP19_AJAX"/></Host>
+>>>>>>> refs/remotes/origin/master
     </Engine>
   </Service>
 </Server><!-- 
