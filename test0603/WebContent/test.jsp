@@ -10,9 +10,6 @@
 <body>
 <<<<<<< HEAD
 ??!!!!?????****
-=======
-??!!!!?????
->>>>>>> branch 'master' of https://github.com/ahncheer/JavaWork1.git
 </body>
 </html>
 
